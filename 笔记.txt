@@ -1,0 +1,67 @@
+包裹类：
+	byte          Byte
+	short		  Short
+	int			  Integer
+	long		  Long
+	float		  Float
+	double		  Double
+	char		  Character
+	boolean       Boolean
+	API：application  programming interface  应用程序接口
+	
+	与字符串间转换：
+		基本---》字符串：基本类型+""  static String toString(int i)  
+		字符串---》基本类型：	static int parseXxx("")	 
+							static Integer valueOf("")
+							
+	JDK5.0特性：
+		自动装箱 ：将基本类型装箱成对象    new Integer(int)
+		自动拆箱 ：将对象拆箱成基本类型    intValue()
+        注意：好处简化代码编写，缺点就是对性能有损耗，不建议过多使用。
+Object：
+	根类，是所有对象的直接或者是间接父类
+	String toString():返回对象的引用值，包名.类名@哈希码值
+	boolean equals()：比较是否是同一个对象
+	                  返回true 说明是同一个对象，那么哈希码值一定相同
+	int hashCode():返回对象的哈希码值，该值相同不能确定对象是否是同一个对象
+	
+Math：
+	数学类，方法时静态方法
+	random,max,min,round,pow,ceil,floor	
+
+访问权限控制修饰符：
+				所有  		不同包子类               同包                   本类
+	public       -             -             -             -
+	protected                  -             -             -
+	default		               				 -		       -
+	private                                                -
+
+抽象(abstract)类：
+	一种类型不同实体的相同属性和行为的抽取定义
+	abstract ：修饰符，修饰类和方法
+	是一个特殊的类
+	
+	特点：
+		1.抽象方法必须在抽象类中。
+		2.不能实例化，也就是说不能创建对象
+		3.必然有子类，如果子类想要创建对象那么子类必须覆盖继承下来的所有抽象方法，
+		   否则子类是抽象类。
+	成员:
+		变量，构造器，方法，抽象方法	
+	抽象类中一定要有抽象方法吗？可以没有抽象方法
+		
+final:
+	最终的意思，修饰符，修饰类，变量，方法
+	修饰类，意味着是最终类，那么该类不能被继承	
+	修饰方法，意味着是最终方法，不能被重写
+	修饰变量,可以修饰成员变量也可以修饰局部变量，最终变量，相当于是常量
+		public static final  double MY_PI = 3.14;
+	空final变量：
+		在类中定义变量，用final修饰，并不赋值。
+		只能在构造器中进行赋值，不能与static一起使用。
+
+
+
+
+
+
